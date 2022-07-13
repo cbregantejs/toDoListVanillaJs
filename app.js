@@ -73,14 +73,12 @@ const pintarTareas = () => {
 }
 
 const btnAccion = e => {
-    // console.log(e.target.classList.contains('fa-check-circle'))
     if (e.target.classList.contains('fa-check-circle')) {
         tareas[e.target.dataset.id].estado = true
         pintarTareas()
     }
 
     if (e.target.classList.contains('fa-minus-circle')) {
-        // console.log(e.target.dataset.id)
         delete tareas[e.target.dataset.id]
         pintarTareas()
     }
